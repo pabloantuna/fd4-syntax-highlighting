@@ -1,0 +1,25 @@
+{
+  "name": "fd4-syntax-highlighting",
+  "displayName": "FD4 Syntax Highlighting",
+  "description": "Syntax highlighting for FD4 language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.71.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "fd4",
+      "aliases": ["FD4", "fd4"],
+      "extensions": [".fd4"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "fd4",
+      "scopeName": "source.fd4",
+      "path": "./syntaxes/fd4.tmLanguage.json"
+    }]
+  }
+}

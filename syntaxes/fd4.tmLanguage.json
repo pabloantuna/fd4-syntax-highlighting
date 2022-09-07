@@ -1,0 +1,135 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "FD4",
+	"patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#naturals"
+    },
+    {
+      "include": "#names"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.fd4",
+          "match": "\\b(let|rec|fun|fix|then|else|in|ifz|print|type)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.fd4",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.fd4",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "begin": "#",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.comment.fd4"
+            }
+          },
+          "end": "\\n",
+          "name": "comment.line.number-sign.fd4"
+        },
+        {
+          "captures": {
+            "0": {
+              "name": "punctuation.definition.comment.fd4"
+            }
+          },
+          "match": "{--}",
+          "name": "comment.block.empty.fd4"
+        },
+        {
+          "include": "#comments-inline"
+        }
+      ]
+    },
+    "comments-inline": {
+      "patterns": [
+        {
+          "begin": "{-",
+          "captures": {
+            "0": {
+              "name": "punctuation.definition.comment.fd4"
+            }
+          },
+          "end": "-}",
+          "name": "comment.block.fd4"
+        },
+        {
+          "begin": "(^[ \\t]+)?(?=//)",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.whitespace.comment.leading.fd4"
+            }
+          },
+          "end": "(?!\\G)",
+          "patterns": [
+            {
+              "begin": "#",
+              "beginCaptures": {
+                "0": {
+                  "name": "punctuation.definition.comment.fd4"
+                }
+              },
+              "end": "\\n",
+              "name": "comment.line.numeral.fd4"
+            }
+          ]
+        }
+      ]
+    },
+    "operators": {
+      "name": "keyword.operator.fd4",
+      "match": "->|=|\\+|\\-"
+    },
+    "naturals": {
+      "name": "constant.numeric.fd4",
+      "match": "\\b[0-9]+\\b"
+    },
+    "names": {
+      "patterns": [
+        {
+          "name": "constant.language.fd4",
+          "match": "\\b_\\b"
+        },
+        {
+          "name": "support.type.fd4",
+          "match": "\\b(?:Nat)\\b"
+        },
+        {
+          "name": "variable.other.fd4",
+          "match": "\\b[a-z_][A-Za-z0-9_]*\\b"
+        },
+        {
+          "name": "entity.name.type.fd4",
+          "match": "\\b[A-Z][A-Za-z0-9_]*\\b"
+        }
+      ]
+    }
+  },
+	"scopeName": "source.fd4"
+}
