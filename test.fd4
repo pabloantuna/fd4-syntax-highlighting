@@ -8,9 +8,14 @@ test test
 test test
 -}
 
-type Jorge = Nat -> Nat -> Nat
-let a : Jorge = let rec gcd (m : Nat) (n : Nat) : Nat = ifz n then m else (ifz m then n else (ifz (n - m) then (gcd (m - n) n) else (gcd m (n - m)))) in gcd #test test
+type FNatNat = Nat -> Nat -> Nat
+let a : FNatNat = 
+  let rec gcd (m : Nat) (n : Nat) : Nat = 
+    ifz n then m else 
+      (ifz m then n else (ifz (n - m) then (gcd (m - n) n) else (gcd m (n - m))))
+  in gcd #test test
 
-let printGeorge : Nat -> Nat = print
+let printFNat : Nat -> Nat = print
 
 let mini = fun (f: Nat -> Nat) -> (fix (mini : Nat -> Nat) (n : Nat) -> ifz (f n) then n else mini (n + 1)) 0
+

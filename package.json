@@ -1,7 +1,8 @@
 {
   "name": "fd4-syntax-highlighting",
   "repository": { "url": "https://github.com/pabloantuna/fd4-syntax-highlighting" },
-  "icon": "./icons/fede4.png",
+  "publisher": "PabloAntuna",
+  "icon": "icons/fede4.png",
   "displayName": "FD4 Syntax Highlighting",
   "description": "Syntax highlighting for FD4 language",
   "version": "0.0.1",
