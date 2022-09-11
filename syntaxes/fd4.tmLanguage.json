@@ -117,7 +117,7 @@
           "match": "\\b_\\b"
         },
         {
-          "name": "support.type.fd4",
+          "name": "storage.type.haskell.fd4",
           "match": "\\b(?:Nat)\\b"
         },
         {
