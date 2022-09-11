@@ -15,7 +15,7 @@
       "aliases": ["FD4", "fd4"],
       "extensions": [".fd4"],
       "configuration": "./language-configuration.json",
-      "icon": {"dark": "./icons/lambdito.png", "light": "./icons/lambdito.png"}
+      "icon": {"dark": "./icons/icon.png", "light": "./icons/icon.png"}
     }],
     "grammars": [{
       "language": "fd4",
