@@ -9,7 +9,7 @@
   "description": "Syntax highlighting for FD4 language",
   "version": "1.0.0",
   "engines": {
-    "vscode": "^1.71.0"
+    "vscode": "^1.22.0"
   },
   "categories": [
     "Programming Languages"
