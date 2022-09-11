@@ -1,11 +1,13 @@
 {
   "name": "fd4-syntax-highlighting",
-  "repository": { "url": "https://github.com/pabloantuna/fd4-syntax-highlighting" },
+  "repository": {
+    "url": "https://github.com/pabloantuna/fd4-syntax-highlighting"
+  },
   "publisher": "PabloAntuna",
   "icon": "icons/fede4.png",
   "displayName": "FD4 Syntax Highlighting",
   "description": "Syntax highlighting for FD4 language",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.71.0"
   },
@@ -13,17 +15,29 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "fd4",
-      "aliases": ["FD4", "fd4"],
-      "extensions": [".fd4"],
-      "configuration": "./language-configuration.json",
-      "icon": {"dark": "./icons/fede4.png", "light": "./icons/fede4.png"}
-    }],
-    "grammars": [{
-      "language": "fd4",
-      "scopeName": "source.fd4",
-      "path": "./syntaxes/fd4.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "fd4",
+        "aliases": [
+          "FD4",
+          "fd4"
+        ],
+        "extensions": [
+          ".fd4"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "dark": "./icons/fede4.png",
+          "light": "./icons/fede4.png"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "fd4",
+        "scopeName": "source.fd4",
+        "path": "./syntaxes/fd4.tmLanguage.json"
+      }
+    ]
   }
 }
