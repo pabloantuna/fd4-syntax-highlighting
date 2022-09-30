@@ -30,6 +30,20 @@
           "dark": "./icons/fede4.png",
           "light": "./icons/fede4.png"
         }
+      },
+      {
+        "id": "fd4bc",
+        "aliases": [
+          "FD4 Bytecode",
+          "bc"
+        ],
+        "extensions": [
+          ".bc"
+        ],
+        "icon": {
+          "dark": "./icons/fede4bc.png",
+          "light": "./icons/fede4bc.png"
+        }
       }
     ],
     "grammars": [
